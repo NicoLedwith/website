@@ -1,0 +1,154 @@
+body {
+  font-family: Raleway;
+  font-size: 14pt;
+  margin: auto;
+  background-color: #ccc;
+}
+
+/* global */
+
+.container {
+  margin: auto;
+  width: 90%;
+}
+
+/* header */
+header {
+  height: 50px;
+  background-color: #2980b9;
+  padding: 15px 55px 0 60px;
+}
+
+header #name {
+  display: inline;
+  font-size: 25pt;
+  padding-top: 20px;
+  color: #fff;
+}
+
+header #hello {
+  display: inline;
+  float: right;
+  font-size: 20pt;
+  right: 50%;
+  color: #fff;
+}
+
+@media only scren and (max-width: 400px) {
+  header #hello {
+    float: none;
+  }
+}
+
+/* nav */
+#nav {
+  height: 40px;
+  background-color: #444;
+  padding: 10px 20px 10px 20px;
+}
+
+#nav-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#nav-list li {
+  display: inline;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#nav-list li.selected a {
+  color: #EA9E3D;
+}
+
+#nav-list li a {
+  text-decoration: none;
+  color: #999;
+}
+#nav-list li a:hover {
+  color: #EA9E3D;
+}
+
+/* bio */
+#bio {
+  height: 450px;
+  font-family: Bitter;
+}
+
+#left-para {
+  float: left;
+  width: 45%;
+}
+
+.mid-line {
+  float: left;
+  border: 0.5px solid #888;
+  height: inherit;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+#right-pic {
+  float: right;
+  width: 45%;
+}
+
+@media only screen and (max-width: 768px) {
+  #right-pic {
+    width: 100%;
+    margin: auto;
+  }
+
+  #left-para {
+    width: 90%;
+    height: 50%;
+  }
+
+  .mid-line {
+    display: none;
+  }
+}
+
+#profile {
+  margin-top: 2.5%;
+  width: 100%;
+}
+
+/* footer */
+#footer-table {
+  height: 50px;
+  width: 100%;
+  border-collapse: collapse;
+  position: fixed;
+  bottom: 0px;
+  /*left: 0px;*/
+}
+
+.footer-color {
+  margin: 0;
+  display: inline;
+  height: 50px;
+  width: 16.6667%;
+  padding: 0;
+}
+
+#red {
+  background-color: #e74c3c;
+}
+#orange {
+  background-color: #e67e22;
+}
+#yellow {
+  background-color: #f1c40f;
+}
+#green {
+  background-color: #27ae60;
+}
+#blue {
+  background-color: #2980b9;
+}
+#purple {
+  background-color: #9b59b6;
+}
