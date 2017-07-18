@@ -1,154 +1,173 @@
 body {
-  font-family: Raleway;
+  font-family: "Quicksand";
   font-size: 14pt;
   margin: auto;
-  background-color: #ccc;
-}
-
-/* global */
+  background-color: #ccc; }
 
 .container {
-  margin: auto;
-  width: 90%;
-}
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+  height: auto; }
 
-/* header */
 header {
   height: 50px;
   background-color: #2980b9;
-  padding: 15px 55px 0 60px;
-}
+  padding: 15px 55px 0 60px; }
 
 header #name {
+  font-family: "Quicksand";
   display: inline;
   font-size: 25pt;
   padding-top: 20px;
-  color: #fff;
-}
+  color: #fff; }
 
 header #hello {
   display: inline;
   float: right;
   font-size: 20pt;
-  right: 50%;
-  color: #fff;
-}
+  right: 50%; }
+  header #hello a {
+    color: #fff;
+    text-decoration: none; }
+  @media only screen and (max-width: 465px) {
+    header #hello {
+      display: none; } }
 
 @media only scren and (max-width: 400px) {
   header #hello {
-    float: none;
-  }
-}
-
+    float: none; } }
 /* nav */
 #nav {
   height: 40px;
   background-color: #444;
-  padding: 10px 20px 10px 20px;
-}
+  padding: 10px 20px 10px 20px; }
 
 #nav-list {
   list-style: none;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 #nav-list li {
   display: inline;
   float: left;
   margin-left: 5px;
-  margin-right: 5px;
-}
+  margin-right: 5px; }
 
 #nav-list li.selected a {
-  color: #EA9E3D;
-}
+  color: #EA9E3D; }
 
 #nav-list li a {
   text-decoration: none;
-  color: #999;
-}
+  color: #999; }
+
 #nav-list li a:hover {
-  color: #EA9E3D;
-}
+  color: #EA9E3D; }
 
 /* bio */
 #bio {
-  height: 450px;
-  font-family: Bitter;
-}
+  height: auto; }
+  @media only screen and (max-width: 768px) {
+    #bio {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
 #left-para {
   float: left;
-  width: 45%;
-}
+  width: 45%; }
+  @media only screen and (max-width: 768px) {
+    #left-para {
+      width: 90%;
+      height: auto;
+      padding: 0 1rem; } }
 
 .mid-line {
   float: left;
   border: 0.5px solid #888;
-  height: inherit;
-  margin-top: 10px;
-  margin-left: 5%;
-}
+  height: 550px;
+  margin-top: 50px;
+  margin-left: 5%; }
+  @media only screen and (max-width: 768px) {
+    .mid-line {
+      display: none; } }
 
 #right-pic {
   float: right;
-  width: 45%;
-}
-
-@media only screen and (max-width: 768px) {
-  #right-pic {
-    width: 100%;
-    margin: auto;
-  }
-
-  #left-para {
-    width: 90%;
-    height: 50%;
-  }
-
-  .mid-line {
-    display: none;
-  }
-}
+  width: 45%; }
+  @media only screen and (max-width: 768px) {
+    #right-pic {
+      width: 100%;
+      margin: auto; } }
 
 #profile {
   margin-top: 2.5%;
-  width: 100%;
-}
+  width: 100%; }
 
 /* footer */
 #footer-table {
-  height: 50px;
+  height: 30px;
   width: 100%;
   border-collapse: collapse;
-  position: fixed;
-  bottom: 0px;
-  /*left: 0px;*/
-}
+  margin-top: 1rem; }
 
 .footer-color {
   margin: 0;
   display: inline;
-  height: 50px;
+  height: 30px;
   width: 16.6667%;
-  padding: 0;
-}
+  padding: 0; }
 
 #red {
-  background-color: #e74c3c;
-}
+  background-color: #e74c3c; }
+
 #orange {
-  background-color: #e67e22;
-}
+  background-color: #e67e22; }
+
 #yellow {
-  background-color: #f1c40f;
-}
+  background-color: #f1c40f; }
+
 #green {
-  background-color: #27ae60;
-}
+  background-color: #27ae60; }
+
 #blue {
-  background-color: #2980b9;
-}
+  background-color: #2980b9; }
+
 #purple {
-  background-color: #9b59b6;
-}
+  background-color: #9b59b6; }
+
+/* Work page and Photos */
+#work-item-list {
+  list-style: none;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  flex-direction: column; }
+
+/* Photos */
+.responsive-image {
+  max-width: 100%; }
+
+.cell img {
+  display: block; }
+
+.cell {
+  margin: 0 1rem;
+  align-items: center; }
+  @media screen and (min-width: 600px) {
+    .cell {
+      width: 60%; } }
+  @media screen and (min-width: 1000px) {
+    .cell {
+      width: calc(100% / 3); } }
+
+.photo-caption {
+  border-bottom: 2px solid #EA9E3D;
+  margin-top: 2px; }
+
+.grid {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+/*# sourceMappingURL=index.css.map */

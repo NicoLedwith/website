@@ -1,0 +1,186 @@
+$main-orange: #EA9E3D
+$main-blue: #2980b9
+
+$title-font: 'Quicksand'
+$body-font: 'Quicksand'
+
+body
+  font-family: $body-font
+  font-size: 14pt
+  margin: auto
+  background-color: #ccc
+
+.container
+  margin: 0 auto
+  max-width: 1200px
+  padding: 1rem
+  height: auto
+
+header
+  height: 50px
+  background-color: $main-blue
+  padding: 15px 55px 0 60px
+
+header #name
+  font-family: $title-font
+  display: inline
+  font-size: 25pt
+  padding-top: 20px
+  color: #fff
+
+header #hello
+  display: inline
+  float: right
+  font-size: 20pt
+  right: 50%
+  a
+    color: #fff
+    text-decoration: none
+  @media only screen and (max-width: 465px)
+    display: none
+
+
+@media only scren and (max-width: 400px)
+  header #hello
+    float: none
+
+/* nav */
+#nav
+  height: 40px
+  background-color: #444
+  padding: 10px 20px 10px 20px
+
+
+#nav-list
+  list-style: none
+  margin-top: 10px
+
+
+#nav-list li
+  display: inline
+  float: left
+  margin-left: 5px
+  margin-right: 5px
+
+
+#nav-list li.selected a
+  color: $main-orange
+
+
+#nav-list li a
+  text-decoration: none
+  color: #999
+
+#nav-list li a:hover
+  color: $main-orange
+
+
+/* bio */
+#bio
+  height: auto
+  @media only screen and (max-width: 768px)
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+#left-para
+  float: left
+  width: 45%
+  @media only screen and (max-width: 768px)
+    width: 90%
+    height: auto
+    padding: 0 1rem
+
+.mid-line
+  float: left
+  border: 0.5px solid #888
+  height: 550px
+  margin-top: 50px
+  margin-left: 5%
+  @media only screen and (max-width: 768px)
+    display: none
+
+#right-pic
+  float: right
+  width: 45%
+  @media only screen and (max-width: 768px)
+    width: 100%
+    margin: auto
+
+#profile
+  margin-top: 2.5%
+  width: 100%
+
+/* footer */
+#footer-table
+  height: 30px
+  width: 100%
+  border-collapse: collapse
+  margin-top: 1rem
+
+
+.footer-color
+  margin: 0
+  display: inline
+  height: 30px
+  width: 16.6667%
+  padding: 0
+
+
+#red
+  background-color: #e74c3c
+
+#orange
+  background-color: #e67e22
+
+#yellow
+  background-color: #f1c40f
+
+#green
+  background-color: #27ae60
+
+#blue
+  background-color: #2980b9
+
+#purple
+  background-color: #9b59b6
+
+/* Work page and Photos */
+
+#work-item-list,
+  list-style: none
+  margin: auto
+  display: flex
+  align-content: center
+  flex-direction: column
+
+
+#work-item-list li,
+
+/* Photos */
+
+.responsive-image
+  max-width: 100%
+
+.cell img
+  display: block
+
+.cell
+  margin: 0 1rem
+  align-items: center
+  @media screen and (min-width: 600px)
+    width: 60%
+  @media screen and (min-width: 1000px)
+    width: calc(100% / 3)
+
+.photo-caption
+  border-bottom: 2px solid $main-orange
+  margin-top: 2px
+
+.grid
+  @media screen and (min-width: 600px)
+  justify-content: center
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row

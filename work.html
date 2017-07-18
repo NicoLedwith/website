@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>Nico Ledwith | Work</title>
+</head>
+<body>
+  <header>
+    <section id="name">Nico Ledwith</section>
+    <section id="hello">Hello there!</section>
+  </header>
+
+  <nav id="nav">
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li class="selected"><a href="work.html">Work</a></li>
+      <li><a href="photos.html">Photos</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="work-item-list-container">
+      <ul id="work-item-list">
+        <li>
+          <h1>LabPal</h1>
+          <p>
+            LabPal is designed to be used in chemistry labs as a means of instant feedback and verification of students' lab work.
+            This fixes the issue of low latency of critical feedback regarding various calculations and data collection during a lab.
+            With this new system, students do not have to wait up to a week for TA’s to grade a handwritten lab notebook—
+            courses move fast, so should grading.
+          </p>
+          <p>
+            Created under the directive of Dr. Greg Scott at Cal Poly, LabPal was born in early 2015. Eric Burlingame and Cody Jones,
+            students at Cal Poly, laid the foundation for the project by configuring <a href="https://laravel.com/">Laravel</a> with a MySQL. I joined a
+            few months later and began development. My completed tasks on LabPal include handling array inputs, allowing students to
+            enter X and Y graph data and check metrics like slope, regression and Y-intercept; creating an import & export system
+            for rapid creation and sharing of assignments using Excel; integrating WebSockets via
+            <a href="http://socketo.me/">Ratchet</a> and <a href="http://crossbar.io/autobahn/">AutobahnJS</a> to allow for push style data updates
+            throught the site; creating a polling system which allows professors to ask customized questions and see students' answers in real time.
+          </p>
+        </li>
+        <li>
+          <h1>CardSort</h1>
+          <p>CardSort is a digitization of a well-implemented card sorting procedure used as a survey tool to explore how humans group data.
+            With this service, instructors can measure how effectively students are learning material. This web app comes with data analytics
+            tools built in and an option to export data for more in-depth statistics. It is also fully generalized, so it can be used for any subject matter.
+          </p>
+        </li>
+        <li>
+          <h1>Pangea</h1>
+          <p>How many times have you heard of an event the day after it happened from a friend or collegue and though "wow, I would have loved that, how did
+            I not know about this?" Say hello to Pangea, a social events network designed to help you discover the events happening around you. Pangea is centered
+            around a map-calender interface, allowing you to find out <em>what</em> is happening and <em>where</em>. The spatial contextualization of event discovery creates an
+            incredibly immersive and experiential experience.
+          </p>
+          <p>
+            Pangea is set to launch in late 2017.
+          </p>
+        </li>
+        <li>
+          <h1>BioBand (The Underwearable)</h1>
+          <p>
+            BioBand is a small clip that sits on your waistband and tracks the changes in color of your skin throughout the day. The motivation behind this device
+            is the theory that slight changes in the hue of a person's skin can correlate to changes in health. We are already familiar with this idea: turning pale,
+            or turning green, and blushing are all examples of color changes correlating to a change in internal body health. BioBand was a Computer Engineering Capstone project
+            designed to capture RGB color data every 30 minutes for 10 seconds at a time. This data was stored on a micro SD card, which was then uploaded to a computer
+            for processing.
+          </p>
+          <p>
+            I was in charge of experimenting with the raw data to dertmine if any useful metrics could be extracted. Inspired by a process called
+            photoplethysmogram, having to do with tracking the changes of blood volume in skin, I performed various digital signal processing algorithims to the data
+            and was able to produce a beats per minute value. I was able to find the isolate the changes in blood flow by applying an FIR filter
+            to the red color data. From this signal, I applied a Fourier Transform to calculate the frequency of blood pumping, which correlated to the BPM. Validation
+            was self performed by measuring heart rate by hand and comparing values. All data processing was done in Python.
+          </p>
+        </li>
+        <li>
+          <h1>Linear Sim</h1>
+          <p>
+            Linear Sim is a computational fluid dynamics problem I completed for a systems programming course. The problem was as follows. We divide a stretch of water in to
+            X number of cells, each evenly spaced, so that they are all in a row (ie, bordered by each other only on the left and the right). Given the inital temperatures of
+            the left most and right most cells of water, what will be the temperatures of each cell every Y amount of time. The left and right cells act as sources, so their
+            temperatures will not change, but each cell in between them will be effected by heat transfer at each time interval.
+          </p>
+          <p>
+            As this was a systems programming class in C, the solution to this problem involed forks and pipes. Each cell was a child process, all forked off by the main process.
+            The left and right cells contained pipes to their neigbors, wich contained pipes to their neighbors, and so on. At each time interval, temperature data was sent from each
+            cell to its neighbors, and each cell had to recalculate its temperature given the new information from its neighbors.
+          </p>
+          <p>
+            This program taught me to design before you code. Jumping into a complex problem like this one without a plan is bound to fail. Drawing diagrams of child processes
+            and pipes between them turned out to be extremely useful, as well as thinking about the different behaviors given a different number of cells.
+          </p>
+        </li>
+        <li>
+          <h1>Dining Philosophers</h1>
+          <p>
+            Dining Philosophers is a classic operating systems problem. Five philosphers sit around a dinner table with a large plate of sushi in the middle.
+            As they are philosophers, all they do is think or eat. There's a problem though, there are only five chopsticks, one between each philosopher.
+            These philosophers haven't figured out the "stab the sushi" method, so they need two chopsticks to eat. If one philosopher is eating, those on either
+            side of her cannot eat. These philosphers are also a bit selfish; once one has picked up one chopstick, they won't put it down until they have another
+            and have eaten. The issue arrises if each philosopher picks up their left chopstick. They will all be waiting for the philospher to their right to put
+            down their chopstick, and since they are sitting in a circle, they are all waiting for each other.
+          </p>
+          <p>
+            This problem is used to model concurrent processes in an operating system. Say two processes need two resources, but each is waiting for the other to
+            release the one they need. The system will go into deadlock and freeze. As part of an operating systems course, I implemented a solution to the Dining
+            Philosphers problem using semephores and the pthreads library. Careful design work was necessary to avoid deadlock on start and to ensure that deadlock
+            did not occur in the middle of the program.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <table id="footer-table">
+      <tr>
+        <td id="red"></td>
+        <td id="orange"></td>
+        <td id="yellow"></td>
+        <td id="green"></td>
+        <td id="blue"></td>
+        <td id="purple"></td>
+      </tr>
+    </table>
+  </footer>
+</body>
+</html>
