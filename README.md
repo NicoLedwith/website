@@ -1,2 +1,2 @@
 # My Personal Website
-Personal Website hosted by getforge: [http://nico.getforge.io](nico.getforge.io)
+Personal Website hosted by getforge: [nico.getforge.io](http://nico.getforge.io)
