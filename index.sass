@@ -159,6 +159,21 @@ header #hello
 #work-item-list li,
 
 /* Photos */
+.photos-container
+  margin-top: 1em
+  p
+    margin: 1em 2em
+  .cell
+    margin: 0 1rem
+    align-items: center
+    @media screen and (min-width: 600px)
+      width: 60%
+    @media screen and (min-width: 1000px)
+      width: calc(100% / 3)
+
+  .photo-caption
+    border-bottom: 2px solid $main-orange
+    margin-top: 2px
 
 .responsive-image
   max-width: 100%
@@ -166,17 +181,6 @@ header #hello
 .cell img
   display: block
 
-.cell
-  margin: 0 1rem
-  align-items: center
-  @media screen and (min-width: 600px)
-    width: 60%
-  @media screen and (min-width: 1000px)
-    width: calc(100% / 3)
-
-.photo-caption
-  border-bottom: 2px solid $main-orange
-  margin-top: 2px
 
 .grid
   @media screen and (min-width: 600px)
@@ -184,3 +188,27 @@ header #hello
   display: flex
   flex-wrap: wrap
   flex-direction: row
+
+.art-container
+  .project
+    margin: 2rem 0 2rem 0
+
+    h3  
+      text-align: center
+
+
+  .cell
+    margin: 0 1rem
+    @media screen and (min-width: 600px)
+      width: 60%
+
+  .art-caption
+    border-bottom: 2px solid $main-orange
+    margin-top: 2px
+
+
+
+
+
+
+
